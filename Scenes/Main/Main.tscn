@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://1vsl5fkvuu0q"]
+
+[ext_resource type="Texture2D" uid="uid://644byafru585" path="res://assets/env/MainBG.png" id="1_d50hk"]
+[ext_resource type="AudioStream" uid="uid://caytqk5vfy6ev" path="res://assets/audio/birdsong.wav" id="2_nmtih"]
+[ext_resource type="FontFile" uid="uid://bhpam16083rfe" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_ngjyq"]
+[ext_resource type="LabelSettings" uid="uid://dr3dfm2bffk75" path="res://Resources/LG_BLUE_96.tres" id="4_gg3uh"]
+[ext_resource type="PackedScene" uid="uid://22etvbe1eyme" path="res://Scenes/LevelButton/LevelButton.tscn" id="5_a8g2g"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d50hk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_nmtih")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.0
+offset_top = 32.0
+offset_right = 65.0
+offset_bottom = 55.0
+grow_horizontal = 2
+rotation = 0.0523599
+theme_override_colors/font_color = Color(0, 0.803922, 0.807843, 1)
+theme_override_colors/font_outline_color = Color(1.26343e-07, 0.151789, 0.152733, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_ngjyq")
+theme_override_font_sizes/font_size = 96
+text = "ANGRY ANIMALS"
+label_settings = ExtResource("4_gg3uh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 48
+
+[node name="LevelButton" parent="HB" instance=ExtResource("5_a8g2g")]
+layout_mode = 2
+_levelNumber = 1
+
+[node name="LevelButton2" parent="HB" instance=ExtResource("5_a8g2g")]
+layout_mode = 2
+_levelNumber = 2
+
+[node name="LevelButton3" parent="HB" instance=ExtResource("5_a8g2g")]
+layout_mode = 2
+_levelNumber = 3

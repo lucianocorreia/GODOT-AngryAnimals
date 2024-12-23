@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://22etvbe1eyme"]
+
+[ext_resource type="Texture2D" uid="uid://du7ql0bibk6m2" path="res://assets/ui/panel_beige.png" id="1_8v4u7"]
+[ext_resource type="Script" path="res://Scenes/LevelButton/LevelButton.cs" id="2_3uwkj"]
+[ext_resource type="LabelSettings" uid="uid://cmf0ipr7ldik8" path="res://Resources/LG_WHITE_32.tres" id="2_u6m4j"]
+[ext_resource type="LabelSettings" uid="uid://b2tdxrbfdsa33" path="res://Resources/LG_WHITE_24.tres" id="3_jpiyr"]
+
+[node name="LevelButton" type="TextureButton" node_paths=PackedStringArray("_levelLabel", "_scoreLabel")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
+texture_normal = ExtResource("1_8v4u7")
+script = ExtResource("2_3uwkj")
+_levelLabel = NodePath("MC/VB/LevelLabel")
+_scoreLabel = NodePath("MC/VB/ScoreLabel")
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VB" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="LevelLabel" type="Label" parent="MC/VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "3"
+label_settings = ExtResource("2_u6m4j")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="MC/VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "9999"
+label_settings = ExtResource("3_jpiyr")
+horizontal_alignment = 1
+vertical_alignment = 1

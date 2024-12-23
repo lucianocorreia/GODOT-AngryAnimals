@@ -1,0 +1,15 @@
+Node
+CanvasLayer
+AudioStreamPlayer
+Label
+VBoxContainer
+MarginContainer
+HBoxContainer
+TextureButton
+TextureRect
+AudioStreamPlayer2D
+AnimationPlayer
+CollisionPolygon2D
+Sprite2D
+Node2D
+StaticBody2D

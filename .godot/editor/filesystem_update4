@@ -1,0 +1,15 @@
+res://Scenes/GameUi/GameUi.tscn
+res://Scenes/Level/Level.tscn
+res://Scenes/Main/Main.tscn
+res://Globals/SignalManager.cs
+res://Scenes/Level/Level.cs
+res://Scenes/LevelButton/LevelButton.cs
+res://Scenes/Animal/Animal.cs
+res://Scenes/Water/Water.cs
+res://Globals/ScoreManager.cs
+res://Scenes/Cup/Cup.cs
+res://Scenes/Scorer/Scorer.tscn
+res://Scenes/Cup/Cup.tscn
+res://Scenes/Scorer/Scorer.cs
+res://Scenes/GameUi/GameUi.cs
+res://Globals/GameManager.cs
